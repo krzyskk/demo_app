@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#welcome'
+  root to: 'rooms#show'
+  mount ActionCable.server => '/cable'
+
 end
