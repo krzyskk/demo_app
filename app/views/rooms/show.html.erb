@@ -1,10 +1,9 @@
 <h1>Chat room</h1>
 
-<div id="messages">
-  <%= render @messages %> 
-</div>
+<section id="messages" data-channel="messages" >
+  <%= render @messages %>
+</section>
 
-<form>
-  <label>Say something:</label><br>
-  <input type="text" data-behavior="room_speaker">
-</form>
+<div id="messages">
+  <%= render "messages/new" %> 
+</div>
