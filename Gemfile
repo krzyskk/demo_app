@@ -2,11 +2,12 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails'
-gem 'devise'
 gem 'bootstrap'
+gem 'devise'
 gem 'pg'
 gem 'puma'
 gem 'sass-rails'
+gem 'elasticsearch-model'
 gem 'uglifier'
 gem 'slim'
 gem "slim-rails"
@@ -21,6 +22,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'faker'
 end
 
 group :development do

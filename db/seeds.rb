@@ -3,3 +3,7 @@
     u.password = "password#{i}"
   end
 end
+
+200.times do |j|
+  Message.create!(content: Faker::Lorem.sentence, user_id: User.all.pluck(:id).sample) 
+end
