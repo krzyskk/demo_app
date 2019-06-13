@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount ActionCable.server, at: '/cable'
   resources :messages, only: [ :new, :create]
   namespace :v1 do
-    get '/mesages', to: 'messages#search'
+    get '/messages', to: 'messages#search'
   end
 
 end
