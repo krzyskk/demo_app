@@ -18,6 +18,7 @@ gem 'uglifier'
 gem 'jbuilder'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
