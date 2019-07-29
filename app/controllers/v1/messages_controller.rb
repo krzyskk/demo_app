@@ -15,7 +15,7 @@ module V1
       if message.save!
         ActionCable.server.broadcast "room_#{room.id}", message: message
       end
-      render json: @room
+      render json: @room, status: :created
     end
 
     def search
