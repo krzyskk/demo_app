@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :rooms do
       resources :messages
     end
-    mount ActionCable.server => '/cable'
     get '/search_message', to: 'messages#search'
   end
 end

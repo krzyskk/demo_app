@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController  
   def create
-    @message = Message.create!(content: params[:message][:content], user_id: current_user.id)
-    ActionCable.server.broadcast('room_channel', content:  @message.content, username: @message.user_id)
+    @message = Room.first.messages.create!(content: params[:message][:content], user_id: User.first.id)
+    ActionCable.server.broadcast('room_1', content:  @message.content)
   end
 end
