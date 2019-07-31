@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   mount ActionCable.server, at: '/cable'
   resources :messages, only: [:new, :create]
   namespace :v1 do
+    post 'auth/login', to: 'sessions#authenticate'
+    post 'signup', to: 'users#create'
     resources :rooms do
       resources :messages
     end

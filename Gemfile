@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'rails'
 
 gem 'active_model_serializers'
+gem 'simple_token_authentication'
 gem 'bootstrap'
 gem 'devise'
 gem 'pg'
